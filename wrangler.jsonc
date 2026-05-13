@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "itp4501-assignment-backend",
+	"name": "itp4501-assignment",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-05-13",
 	"observability": {

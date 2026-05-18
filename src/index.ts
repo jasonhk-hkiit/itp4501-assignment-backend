@@ -1,4 +1,4 @@
-import random from "random";
+import { Random } from "random";
 
 type Hand = 0 | 5;
 
@@ -12,6 +12,8 @@ interface OpponentChoices extends Hands
 {
 	guess: number;
 }
+
+const random = new Random(Date.now());
 
 function randomHands(): Hands
 {

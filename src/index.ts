@@ -13,6 +13,12 @@ interface OpponentChoices extends Hands
 	guess: number;
 }
 
+const headers = new Headers(
+	{
+		"Cache-Control": "no-store",
+		"CDN-Cache-Control": "max-age=1",
+	});
+
 const random = new Random(Date.now());
 
 function randomHands(): Hands
@@ -35,6 +41,6 @@ export default
 			guess: hands.left + hands.right + playerHands.left + playerHands.right,
 		};
 
-		return Response.json(choices);
+		return Response.json(choices, { headers });
 	},
 } satisfies ExportedHandler<Env>;

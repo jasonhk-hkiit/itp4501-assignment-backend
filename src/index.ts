@@ -1,4 +1,4 @@
-import { Random } from "random";
+import random from "random";
 
 type Hand = 0 | 5;
 
@@ -17,8 +17,6 @@ const headers = new Headers(
 {
     "Cache-Control": "no-store",
 });
-
-const random = new Random(Date.now());
 
 function randomHands(): Hands
 {
